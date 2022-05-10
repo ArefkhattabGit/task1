@@ -28,7 +28,7 @@ class CouncilSessionsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
@@ -54,7 +54,7 @@ Widget _buildTextFieldItem({
 }) {
   return Padding(
     padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
-    child: Container(
+    child: SizedBox(
       height: 50.h,
       child: Row(
         children: [
@@ -65,7 +65,7 @@ Widget _buildTextFieldItem({
               keyboardType: type,
               controller: controller,
               decoration: InputDecoration(
-                  prefixIcon: Container(
+                  prefixIcon: SizedBox(
                     width: 10.w,
                     height: 10.h,
                     child: SvgPicture.asset(
@@ -138,7 +138,7 @@ Widget _buildListViewItem({required final List<UserMembers> members}) {
           SizedBox(
             height: 5.h,
           ),
-          Container(
+          SizedBox(
             width: double.infinity,
             child: ListView.builder(
               shrinkWrap: true,
@@ -162,7 +162,7 @@ Widget _buildListViewItem({required final List<UserMembers> members}) {
                   Flexible(
                     child: Text(
                       FirstListModel.models[index],
-                      style: FontsAppHelper().avenirArabicBookFont(size: 14),
+                      style: FontsAppHelper().avenirArabicBookFont(),
                     ),
                   ),
                 ],
@@ -201,7 +201,7 @@ Widget _buildListViewItem({required final List<UserMembers> members}) {
                       color: dividerColor,
                     ),
                   ),
-                  itemBuilder: (context, index) => Container(
+                  itemBuilder: (context, index) => SizedBox(
                     width: 56.w,
                     height: 56.h,
                     child: Row(

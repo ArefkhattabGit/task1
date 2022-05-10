@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_task/app/screens/tabs/establishment_municipality.dart';
-import 'package:flutter_screenutil/src/size_extension.dart';
 
 import '../../../constant/colors.dart';
 import '../council _sessions.dart';
@@ -22,11 +21,7 @@ class _MainTabScreenState extends State<MainTabScreen>
   ];
   late String currentTitle;
 
-  List<Widget> screens = [
-    EstablishmentMunicipalityScreen(),
-    CouncilSessionsScreen(),
-  ];
-
+  @override
   void initState() {
     currentTitle = titles[0];
     controller = TabController(length: 2, vsync: this);
@@ -49,20 +44,21 @@ class _MainTabScreenState extends State<MainTabScreen>
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-              actions: const [
-                Icon(
-                  Icons.arrow_back_ios,
-                  color: Colors.white,
-                ),
-              ],
-              leading: GestureDetector(
-                onTap: () => Navigator.pop(context),
-                child: const Icon(
-                  Icons.arrow_back_ios,
-                  color: blackColor,
-                ),
+            actions: const [
+              Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
               ),
-              title: Text(currentTitle)),
+            ],
+            leading: GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: const Icon(
+                Icons.arrow_back_ios,
+                color: blackColor,
+              ),
+            ),
+            title: Text(currentTitle),
+          ),
           body: Column(
             children: [
               TabBar(

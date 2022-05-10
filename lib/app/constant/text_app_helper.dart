@@ -9,4 +9,9 @@ class TextAppHelper {
   static const txt_municipal_administration = 'إدارة البلدية';
   static const txt_municipal_facilities = 'مرافق ومباني البلدية';
   static const txt_staff_phones = 'هواتف الموظفين';
+  static const txt_character_guide = 'دليل الحرف';
+  static const txt_you_can_search =
+      'يمكنك البحث من خلال اسم الحرفة أو الشارع أو المبنى';
+
+  static const txt_my_bill = 'فاتورتي';
 }

@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_task/app/constant/font_helper.dart';
-import 'package:flutter_application_task/app/screens/about.dart';
+import 'package:flutter_application_task/app/screens/character%20_guide_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'app/constant/colors.dart';
@@ -58,14 +58,14 @@ class MyApp extends StatelessWidget {
             labelColor: blueColor,
             labelStyle: FontsAppHelper().avenirArabicMediumFont(),
             unselectedLabelStyle: FontsAppHelper().avenirArabicMediumFont(),
-            unselectedLabelColor: const Color(
-              0xffBDBBBB,
-            ),
+            unselectedLabelColor: const Color(0xff8A8A8F
+                // 0xffBDBBBB,
+                ),
             indicator: const UnderlineTabIndicator(),
           ),
         ),
         home: const Directionality(
-          child: AboutScreen(),
+          child: CharacterGuideScreen(),
           textDirection: TextDirection.rtl,
         ),
       ),

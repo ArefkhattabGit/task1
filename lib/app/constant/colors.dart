@@ -11,3 +11,5 @@ const dividerColor = Color(0xffEFEFF5);
 const hintColor = Color(0xff8A8A8F);
 const stackColor = Color(0xffF7F7F8);
 const whiteColor = Color(0xffFFFFFF);
+const customAppBarColor = Color(0xffF7F7F8);
+const tableColor = Color(0xff8A8A8F);
